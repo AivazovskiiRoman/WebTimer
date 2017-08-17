@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Timer 4</title>
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/flipclock.css">
+  <link rel="stylesheet" href="assets/css/style4.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="top-menu">
+      <ul>
+        <li><a href="/bt/timer">Our timer</a></li>
+        <li><a href="/bt/timer/timer2.html">Timer 2</a></li>
+        <li><a href="/bt/timer/timer3.html">Timer 3</a></li>
+        <li><a href="/bt/timer/timer4.html">Timer 4</a></li>
+      </ul>
+    </div>
+
+    <div class="wrap">
+
+      <div style="padding:15px">
+        <p> .timer-b-black - Big black timer <button type="button" id="style1">Try it</button></p><br>
+        <p> .timer-b-gray - Big gray timer <button type="button" id="style2">Try it</button></p><br>
+        <p> .timer-m-black - Middle black timer <button type="button" id="style3">Try it</button></p><br>
+        <p> .timer-m-gray - Middle gray timer <button type="button" id="style4">Try it</button></p><br>
+        <p> .timer-s-black - Small black timer (mobile version) <button type="button" id="style5">Try it</button></p><br>
+        <p> .timer-s-gray  - Small gray timer (mobile version) <button type="button" id="style6">Try it</button></p>
+      </div>
+
+      <!-- <div class="timer-b-black">
+        <div class="countdown"></div>
+      </div> -->
+
+      <!-- demo -->
+      <br><br>
+      <div id="style" class="timer-b-black">
+        <div class="countdown"></div>
+      </div>
+      <br><br>
+
+    </div>
+
+  <script src="//s3.amazonaws.com/media.briantracy.com/assets/js/jquery-1.11.2.min.js"></script>
+  <script src="assets/js/flipclock.js"></script>
+
+  <script type="text/javascript">
+
+    $(function(){
+        $("#style1").click(function(){
+          $("#style").removeClass().addClass("timer-b-black");
+        });
+        $("#style2").click(function(){
+          $("#style").removeClass().addClass("timer-b-gray");
+        });
+        $("#style3").click(function(){
+          $("#style").removeClass().addClass("timer-m-black");
+        });
+        $("#style4").click(function(){
+          $("#style").removeClass().addClass("timer-m-gray");
+        });
+        $("#style5").click(function(){
+          $("#style").removeClass().addClass("timer-s-black");
+        });
+        $("#style6").click(function(){
+          $("#style").removeClass().addClass("timer-s-gray");
+        });
+    })
+
+    // Timer
+    $(document).ready(function() {
+      var clock;
+      var currentDate = new Date(); 
+      var futureDate = new Date("September 17, 2017, 20:00:00 UTC");
+      var timer = futureDate.getTime() / 1000 - currentDate.getTime() / 1000; 
+
+      if (timer < 0 ) {
+        timer = 0;
+        timerEnd();
+      }
+
+      clock = $('.countdown').FlipClock(timer, {
+            clockFace: 'DailyCounter',
+            autoStart: false,
+            callbacks: {
+              stop: function() {
+                timerEnd();
+              }
+            }
+        });
+        clock.setCountdown(true);
+        clock.start();
+
+        function timerEnd () {
+          $(".countdown").hide();
+          $("#style").html("Time is over!");
+          console.log("Time is over!");
+        }
+    });
+
+  </script>
+
+</body>
+
+</html>

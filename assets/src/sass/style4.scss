@@ -1,0 +1,204 @@
+// Variables
+$lato: 'Lato';
+
+body {
+  background-color: rgb(246, 255, 254);
+  font-family: $lato;
+}
+
+.wrap {
+  width: 1000px;
+  margin: auto;
+  @media only screen and (max-width: 1000px) {
+      width: 95%;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+// Menu
+.top-menu {
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+
+  li {
+    float: left;
+  }
+
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+  li a:hover {
+    background-color: #111;
+  }
+}
+
+// Timer
+
+.timer-b-black, .timer-b-gray,
+.timer-m-black, .timer-m-gray,
+.timer-s-black, .timer-s-gray
+ {
+  text-align: center;
+  .flip-clock-divider {
+    margin: 0;
+    .flip-clock-label {
+      top: 10em;
+    }
+  }
+}
+
+.timer-b-black, .timer-b-gray {
+  .flip-clock-wrapper {
+    .flip-clock-label {
+      top: 5em;
+      font-size: 2em;
+      right: -96px;
+    }
+    .minutes .flip-clock-label {
+      right: -108px;
+    }
+    .seconds .flip-clock-label {
+      right: -112px;
+    }
+  }
+}
+
+.timer-b-gray, .timer-m-gray , .timer-s-gray {
+  .flip-clock-wrapper {
+    .inn {
+      background-color: #e9e9e9;
+      color: #222222;
+    }
+    .up:after {
+      background-color: rgb(135, 135, 135);
+      background-color: rgba(135, 135, 135, 0.4);
+    }
+  }
+}
+
+.timer-m-black, .timer-m-gray,
+.timer-s-black, .timer-s-gray {
+  .flip-clock-wrapper {
+    .flip {
+      margin: 3px;
+    }
+    ul {
+      width: 30px;
+      height: 50px;
+      border-radius: 4px;
+
+      .inn {
+        font-size: 35px;
+        line-height: 1.5;
+        text-shadow: none;
+        border-radius: 4px;
+      }
+      .down {
+        border-bottom-left-radius: 4px;
+        border-bottom-right-radius: 4px;
+      }
+    }
+    .flip-clock-divider {
+      width: 5px;
+      height: 52px;
+    }
+    .flip-clock-divider.days {
+      width: 0;
+    }
+    .flip-clock-dot {
+      width: 3px;
+      height: 3px;
+      left: 3px;
+    }
+    .flip-clock-dot.top {
+        top: 22px;
+        left: 1px;
+    }
+    .flip-clock-dot.bottom {
+        bottom: 12px; 
+        left: 1px;
+    }
+    .up .shadow {
+      border-top-left-radius: 4px;
+      border-top-right-radius: 4px;
+    }
+    .flip-clock-label {
+      top: 4em;
+      right: -53px;
+      font-size: 1.4em;
+    }
+    .hours .flip-clock-label {
+      right: -57px;
+    }
+    .minutes .flip-clock-label {
+      right: -64px;
+    }
+    .seconds .flip-clock-label {
+      right: -66px;
+    }
+  }
+}
+
+.timer-s-black, .timer-s-gray {
+  .flip-clock-wrapper {
+    ul {
+      width: 20px;
+      height: 36px;
+      border-radius: 3px;
+
+      .inn {
+        font-size: 24px;
+        line-height: 1.5;
+        text-shadow: none;
+        border-radius: 3px;
+      }
+      .down {
+        border-bottom-left-radius: 3px;
+        border-bottom-right-radius: 3px;
+      }
+    }
+    .flip-clock-divider {
+      width: 2px;
+      height: 52px;
+    }
+    .flip-clock-dot {
+      width: 2px;
+      height: 2px;
+      left: 3px;
+    }
+    .flip-clock-dot.top {
+        top: 14px;
+        left: 0;
+    }
+    .flip-clock-dot.bottom {
+        bottom: 23px; 
+        left: 0;
+    }
+    .flip-clock-label {
+      right: -36px;
+      font-size: 1em;
+    }
+    .hours .flip-clock-label {
+      right: -41px;
+    }
+    .minutes .flip-clock-label {
+      right: -45px;
+    }
+    .seconds .flip-clock-label {
+      right: -48px;
+    }
+  }
+}

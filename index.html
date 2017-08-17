@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Timer 1</title>
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/style1.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="top-menu">
+    <ul>
+      <li><a href="/bt/timer">Our timer</a></li>
+      <li><a href="/bt/timer/timer2.html">Timer 2</a></li>
+      <li><a href="/bt/timer/timer3.html">Timer 3</a></li>
+      <li><a href="/bt/timer/timer4.html">Timer 4</a></li>
+    </ul>
+  </div>
+
+  <div class="wrap">
+ 
+    <ul class="counter-ul"></ul>
+
+  </div>
+
+  <script src="//s3.amazonaws.com/media.briantracy.com/assets/js/jquery-1.11.2.min.js"></script>
+  <script src="assets/js/script1.js"></script>
+
+  <script>
+    $('.counter-ul').timerCountdown({
+      timerEnd: "September 17, 2017, 01:00:00 UTC",
+      format: "on",
+      complete: function() {
+        console.log("Timer done");
+        $('.counter-ul').hide();
+      }
+    });
+  </script>
+
+</body>
+
+</html>
