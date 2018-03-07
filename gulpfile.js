@@ -1,10 +1,10 @@
 'use strict';
 
-var gulp   = require('../node_modules/gulp');
-var sass   = require('../node_modules/gulp-sass');
-var watch  = require('../node_modules/gulp-watch');
-var uglify = require('../node_modules/gulp-uglify');
-var gutil  = require('../node_modules/gulp-util');
+var gulp   = require('./node_modules/gulp');
+var sass   = require('./node_modules/gulp-sass');
+var watch  = require('./node_modules/gulp-watch');
+var uglify = require('./node_modules/gulp-uglify');
+var gutil  = require('./node_modules/gulp-util');
 
 gulp.task('sass', function(){
   return gulp.src('assets/src/sass/**/*.scss')

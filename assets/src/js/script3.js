@@ -1,77 +1,73 @@
 setInterval(function () {
-    secondPlay()
+  secondPlay()
 }, 1000);
 
 
 setInterval(function () {
-    minutePlay()
+  minutePlay()
 }, 10000);
 
 
 function secondPlay() {
-$(".countdown").removeClass("play");
-var aa = $("ul.secondPlay li.active");
+  $(".countdown").removeClass("play");
+  var aa = $("ul.secondPlay li.active");
 
-if (aa.html() == undefined) {
+  if (aa.html() == undefined) {
     aa = $("ul.secondPlay li").eq(0);
     aa.addClass("before")
-        .removeClass("active")
-        .next("li")
-        .addClass("active")
-        .closest(".countdown")
-        .addClass("play");
+      .removeClass("active")
+      .next("li")
+      .addClass("active")
+      .closest(".countdown")
+      .addClass("play");
 
-}
-else if (aa.is(":last-child")) {
+  } else if (aa.is(":last-child")) {
     $("ul.secondPlay li").removeClass("before");
     aa.addClass("before").removeClass("active");
     aa = $("ul.secondPlay li").eq(0);
     aa.addClass("active")
-        .closest(".countdown")
-        .addClass("play");
-}
-else {
+      .closest(".countdown")
+      .addClass("play");
+  } else {
     $("ul.secondPlay li").removeClass("before");
     aa.addClass("before")
-        .removeClass("active")
-        .next("li")
-        .addClass("active")
-        .closest(".countdown")
-        .addClass("play");
-}
+      .removeClass("active")
+      .next("li")
+      .addClass("active")
+      .closest(".countdown")
+      .addClass("play");
+  }
 
 }
 
 function minutePlay() {
-$(".countdownbody").removeClass("play");
-var aa = $("ul.minutePlay li.active");
+  $(".countdownbody").removeClass("play");
+  var aa = $("ul.minutePlay li.active");
 
-if (aa.html() == undefined) {
+  if (aa.html() == undefined) {
     aa = $("ul.minutePlay li").eq(0);
     aa.addClass("before")
-        .removeClass("active")
-        .next("li")
-        .addClass("active")
-        .closest(".countdown")
-        .addClass("play");
+      .removeClass("active")
+      .next("li")
+      .addClass("active")
+      .closest(".countdown")
+      .addClass("play");
 
-}
-else if (aa.is(":last-child")) {
+  } else if (aa.is(":last-child")) {
     $("ul.minutePlay li").removeClass("before");
     aa.addClass("before").removeClass("active");
     aa = $("ul.minutePlay li").eq(0);
     aa.addClass("active")
-        .closest(".countdown")
-        .addClass("play");
-}
-else {
+      .closest(".countdown")
+      .addClass("play");
+  } else {
     $("ul.minutePlay li").removeClass("before");
     aa.addClass("before")
-        .removeClass("active")
-        .next("li")
-        .addClass("active")
-        .closest(".countdown")
-        .addClass("play");
-}
+      .removeClass("active")
+      .next("li")
+      .addClass("active")
+      .closest(".countdown")
+      .addClass("play");
+  }
 
 }
